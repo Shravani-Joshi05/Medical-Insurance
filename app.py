@@ -70,7 +70,7 @@ input_data = pd.DataFrame([[
 
 # -------------------- Prediction --------------------
 if st.button("🔍 Calculate Insurance Cost"):
-    raw_prediction = model.predict(input_data)[0]
+    raw_prediction = model.predict(input_data.values)[0]
 
     # -------- FIX: Insurance must be positive --------
     MIN_CHARGE = 3000  # realistic minimum
